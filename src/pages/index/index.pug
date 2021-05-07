@@ -1,0 +1,31 @@
+extends ../base/base
+//- include ../../components/logo/logo
+include ../../components/header/header
+include ../../components/content-top/content-top
+include ../../components/content-bottom/content-bottom
+include ../../components/form/form
+include ../../components/footer/footer
+
+block variables
+  -
+    const lang = 'ru'
+    const title = 'UniPro'
+    const keywords = 'UniPro главная страница'
+    const description = 'Оффициальный сайт компании UniPro'
+    const bodyClassName = 'i-page'
+
+block main
+  // abbreviation "i-page" means "index-page"
+  .i-page__wrapper
+    h1.i-page__title We are UniPro
+    header.i-page__header
+      +header()
+    main.i-page__content
+      .i-page__content-top
+        +content-top()
+      .i-page__content-bottom
+        +content-bottom()
+      .i-page__form
+        +form()
+    footer.i-page__footer
+      +footer()

@@ -1,0 +1,106 @@
+@import '../../theme/scss/mixins/container.scss';
+
+.content-top {
+  max-width: 511px;
+  margin: 0 auto;
+
+  @media (min-width: $small-tablet-width) {
+    margin: 0;
+    margin-bottom: 25px;
+    max-width: unset;
+    display: grid;
+    grid-template-columns: 1fr 180px;
+    grid-gap: 2px;
+  }
+
+  @media (min-width: 960px) {
+    grid-gap: 14px;
+    max-width: 960px;
+    margin: 0 auto 25px;
+  }
+
+  &__banner {
+    @media (min-width: $small-tablet-width) {
+      background: rgba(253, 255, 140, 0.49);
+    }
+
+    @media (min-width: 960px) {
+      display: flex;
+    }
+
+    &-img {
+      position: relative;
+      background: url(./img/banner.jpg) no-repeat;
+      background-size: cover;
+      min-height: 224px;
+
+      @media (min-width: 414px) {
+        min-height: 258px;
+      }
+
+      @media (min-width: $small-tablet-width) {
+        background: unset;
+      }
+
+      @media (min-width: 960px) {
+        max-width: 511px;
+        width: 100%;
+        min-height: 319px;
+        background: url(./img/banner.jpg) no-repeat;
+        background-size: cover;
+      }
+    }
+
+    &-overlay {
+      position: absolute;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      top: 0;
+      background: rgba(253, 255, 140, 0.49);;
+
+      @media (min-width: $small-tablet-width) {
+        display: none;
+      }
+
+      @media (min-width: 960px) {
+        display: block;
+      }
+    }
+
+    &-description {
+      @media (min-width: 960px) {
+        background: $section-bg-secondary;
+        min-width: 255px;
+      }
+    }
+  }
+
+  &__quotes {
+    margin: 0 15px;
+    background: #F0F0F0;
+    padding-top: 22px;
+
+    @media (min-width: 414px) {
+      padding-top: 20px;
+      margin: 0 10px;
+    }
+
+    @media (min-width: 511px) {
+      margin: 0;
+    }
+
+    @media (min-width: $small-tablet-width) {
+      padding-top: 0;
+      background: #fff;
+    }
+
+    .info-section + .info-section {
+      margin-top: 2px;
+
+      @media (min-width: 960px) {
+        margin-top: 14px;
+      }
+    }
+  }
+}

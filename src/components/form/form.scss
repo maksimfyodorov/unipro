@@ -1,0 +1,67 @@
+@import '../../theme/scss/variables.scss';
+
+.form {
+  background: #F0F0F0;
+  display: flex;
+  margin: 0 15px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  max-width: 511px;
+
+  @media (min-width: 414px) {
+    margin: 0 10px;
+    padding-bottom: 19px;
+  }
+
+  @media (min-width: 511px) {
+    margin: 0 auto;
+  }
+
+  @media (min-width: $small-tablet-width) {
+    max-width: unset;
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+
+  @media (min-width: 960px) {
+    display: none;
+  }
+
+  &__input-container {
+    min-height: 44px;
+    background: #F0F0F0;
+    width: 100%;
+    padding: 0 44px;
+    position: relative;
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      width: 44px;
+      height: 44px;
+      background: $section-bg-primary;
+    }
+
+    &::before {
+      left: 0;
+    }
+  }
+
+  &__input {
+    background: #fff;
+    width: 100%;
+    min-height: inherit;
+    padding: 0 15px;
+    font-family: "Roboto", Arial, sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+  }
+
+  &__button {
+    min-height: 44px;
+    min-width: 44px;
+    background: $section-bg-primary;
+    margin-left: 20px;
+  }
+}

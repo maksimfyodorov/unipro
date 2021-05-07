@@ -1,0 +1,18 @@
+include ../info-section/info-section
+include ../news/news
+
+mixin content-bottom()
+  -
+    const fs = require('fs')
+    const data = JSON.parse(fs.readFileSync('./src/components/content-bottom/data.json'))
+    const {news} = data
+
+  section.content-bottom
+    .content-bottom__news
+      +news()
+    .content-bottom__info-block
+      +info-section({news: news})
+      +info-section({news: news})
+      +info-section({news: news, isExpanded: true})
+      +info-section({type: 'purchases'})
+      +info-section({type: 'block'})

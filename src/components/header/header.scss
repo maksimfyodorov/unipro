@@ -1,0 +1,109 @@
+@import '../../theme/scss/variables.scss';
+
+.header {
+  position: relative;
+  padding: 10px 0;
+
+  @media (min-width: 414px) {
+    padding-bottom: 12px;
+  }
+
+  @media (min-width: $small-tablet-width) {
+    padding-top: 20px;
+    padding-bottom: 17px;
+  }
+
+  @media (min-width: 960px) {
+    padding-bottom: 23px;
+  }
+
+  &__content-wrapper {
+    margin: 0 auto;
+    max-width: 960px;
+  }
+
+  &__logo {
+    margin-left: 15px;
+
+    @media (min-width: 414px) {
+      margin-left: 10px;
+    }
+
+    @media (min-width: $small-tablet-width) {
+      margin-left: 20px;
+    }
+
+    @media (min-width: 960px) {
+      margin-left: 40px;
+      margin-bottom: 8px;
+    }
+  }
+
+  &__content {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    transform: translateX(100%);
+    max-width: 400px;
+    width: 100%;
+    min-height: 100%;
+    background: $section-bg-primary;
+    transition: .5s;
+
+    &._activated {
+      transform: translateX(0);
+    }
+
+    @media (min-width: 960px) {
+      min-height: 39px;
+      background: $section-bg-secondary;
+      position: static;
+      max-width: unset;
+      transform: translateX(0);
+    }
+  }
+
+  &__burger {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    width: 42px;
+    height: 42px;
+    background: $section-bg-secondary;
+    cursor: pointer;
+    z-index: 2;
+
+    @media (min-width: 414px) {
+      right: 10px;
+    }
+
+    @media (min-width: $small-tablet-width) {
+      top: 29px;
+      right: 20px;
+    }
+
+    @media (min-width: 960px) {
+      display: none;
+    }
+  }
+
+  &__backdrop {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, .5);
+    z-index: 1;
+    display: none;
+
+    &._activated {
+        display: block;
+    }
+
+    @media (min-width: 960px) {
+      display: none;
+    }
+  }
+}

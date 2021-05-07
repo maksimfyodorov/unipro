@@ -1,0 +1,53 @@
+@import '../../theme/scss/mixins/visually-hidden.scss';
+@import '../../theme/scss/mixins/container.scss';
+
+
+.i-page {
+  &__title {
+    @include visually-hidden;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+  }
+
+  &__header {
+    background: #fff;
+  }
+
+  &__content {
+    flex: 1 0 auto;
+
+    @media (min-width: $small-tablet-width) {
+      margin: 0 20px;
+    }
+
+    @media (min-width: 960px) {
+      margin: 0;
+    }
+  }
+
+  &__content-bottom {
+    padding: 0 15px;
+    max-width: 511px;
+    margin: 0 auto;
+
+    @media (min-width: 414px) {
+      padding: 0 10px;
+    }
+
+    @media (min-width: 511px) {
+      padding: 0;
+    }
+
+    @media (min-width: $small-tablet-width) {
+      max-width: unset;
+    }
+  }
+
+  &__footer {
+    flex: 0 0 auto;
+  }
+}

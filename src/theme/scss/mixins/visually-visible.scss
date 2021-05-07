@@ -1,0 +1,6 @@
+@import './visually-hidden.scss';
+
+@mixin visually-visible {
+  @include visually-hidden;
+  all: unset;
+}

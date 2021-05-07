@@ -1,0 +1,29 @@
+@import '../../theme/scss/variables.scss';
+
+.news {
+  min-height: 516px;
+  background: $section-bg-primary;
+  padding-top: 69px;
+  padding-left: 67px;
+
+  @media (min-width: 414px) {
+    padding-left: 80px;
+  }
+
+  @media (min-width: $small-tablet-width) {
+    padding-left: 148px;
+    padding-top: 41px;
+    min-height: 309px;
+  }
+
+  @media (min-width: 960px) {
+    min-height: 516px;
+    padding-left: 76px;
+    padding-top: 69px;
+  }
+
+  &__title {
+    font-size: 18px;
+    font-weight: 400;
+  }
+}

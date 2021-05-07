@@ -1,0 +1,39 @@
+@import '../../theme/scss/variables.scss';
+
+.content-bottom {
+  max-width: 960px;
+  margin: 0 auto;
+
+  @media (min-width: 960px) {
+    display: grid;
+    grid-template-columns: 375px 1fr;
+    grid-gap: 15px;
+  }
+
+  &__news {
+    padding: 21px 0 19px;
+    background: #F0F0F0;
+
+    @media (min-width: $small-tablet-width) {
+      background: #fff;
+      padding-top: 0;
+      padding-bottom: 27px;
+    }
+
+    @media (min-width: 960px) {
+      padding: 0;
+    }
+  }
+
+  &__info-block {
+    @media (min-width: $small-tablet-width) {
+      display: grid;
+    }
+
+    @media (min-width: 960px) {
+      display: grid;
+      grid-template-columns: repeat(3, 180px);
+      grid-gap: 15px;
+    }
+  }
+}

@@ -1,0 +1,16 @@
+@import '../../theme/scss/variables.scss';
+
+.logo {
+  font-size: 0;
+  min-width: 105px;
+
+  &__img {
+    min-height: 42px;
+    background: url(./img/logo.svg) no-repeat;
+
+    @media (min-width: $small-tablet-width) {
+      min-height: 63px;
+      background: url(./img/logo-large.svg) no-repeat;
+    }
+  }
+}

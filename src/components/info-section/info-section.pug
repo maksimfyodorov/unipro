@@ -1,0 +1,21 @@
+mixin info-section({ type, news = [], src = '../src/components/info-section/img/info-section-img.jpg', alt = 'Панорамный вид на близлежащую территорию', isExpanded } = {})
+  -
+    const expandedModifier = isExpanded && '_expanded'
+    const typeModifiers = {
+      purchases: '_type_purchases',
+      block: '_type_block'
+    }
+    const titleModifiers = {
+      purchases: 'Закупки и продажи',
+      block: 'Блок 3'
+    }
+    const classes = [expandedModifier, typeModifiers[type]]
+
+  article.info-section(class = classes)
+    h2.info-section__title= titleModifiers[type] || 'Раскрытие информации'
+    .info-section__img
+      img(src = src alt = alt)
+    ul.info-section__news
+      each item in news
+        - const {newsText} = item
+        li.info-section__news-item= newsText
